@@ -20,4 +20,5 @@ while 1 == 1:
     f.close
     with open(filename,'r') as f:
         for row in f:
-            print (row)
+            rrow = row.split()
+            print (rrow)
