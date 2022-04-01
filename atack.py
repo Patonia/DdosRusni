@@ -9,5 +9,5 @@ filename = directory + 'target.txt'
 r = requests.get(url)
 
 f = open(filename,'w')
-f.write(r.content)
+f.write(str(r.content))
 
