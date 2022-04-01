@@ -15,7 +15,7 @@ while 1 == 1:
     filename = directory + 'target.txt'
     r = requests.get(url)
     f = open(filename,'w')
-    f.write(r.content)
+    f.write(str(r.content)+'\n')
     f.close
     with open(filename,'r') as f:
         for row in f:
