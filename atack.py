@@ -8,7 +8,7 @@ with open('test.txt', 'w') as f:
     stdout=f,
     stderr=f)
    
-while 1 = 1 do:
+while 1 == 1 do:
     timeout=time.time()+3600
     url = "https://raw.githubusercontent.com/Patonia/Patonia/main/target.txt"
     directory = getcwd()
