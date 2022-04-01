@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import socket,time,threading,sys,random,os,subprocess
+import socket,time,threading,sys,random,os,subprocess,requests
 from os import getcwd
 
 url = "https://raw.githubusercontent.com/Patonia/Patonia/main/target.txt"
