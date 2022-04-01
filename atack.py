@@ -17,6 +17,6 @@ while 1 == 1:
     f = open(filename,'w')
     f.write(r.content)
     f.close
-    with open(filename,'r') as f
+    with open(filename,'r') as f:
         for row in f:
             print row
