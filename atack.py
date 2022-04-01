@@ -7,7 +7,7 @@ url = "https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt"
 directory = getcwd()
 filename = directory + 'target.txt'
 r = requests.get(url)
-print (url, directiry, filename, r)
+print (url, directory, filename, r)
 f = open(filename,'w')
 f.write(str(r.content))
 
