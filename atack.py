@@ -5,7 +5,7 @@ from os import getcwd
 
 url = "https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt"
 directory = getcwd()
-filename = directory + 'target.txt'
+filename = directory + '/target.txt'
 r = requests.get(url)
 print (url, directory, filename, r)
 f = open(filename,'w')
