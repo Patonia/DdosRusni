@@ -38,6 +38,7 @@ while 1 == 1:
         for row in rows:
             print(row)
             trgt = row.split(":")
+            print(trgt)
             print ("Starting atack to %s with %s threads on %s port" % (trgt[0], count_threads, trgt[1]))
             for i in range(count_threads):
                 #print ("Starting %s thread", i)
