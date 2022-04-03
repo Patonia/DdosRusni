@@ -34,6 +34,8 @@ while 1 == 1:
         f.seek(0)
         count_targets = len(f.readlines())
         print (rows, count_targets)
+        rrows = rows.split("/n")
+        print(rrows)
         count_threads = int(1000//count_targets)
         for row in rows:
             print(row)
