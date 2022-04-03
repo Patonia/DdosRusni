@@ -32,7 +32,7 @@ while 1 == 1:
     with open("target.txt",'r') as f:
         for row in f:
             rrow = row.split()
-            print(rrow)
+            print(row, rrow)
             count_targets = len(rrow)
             print(count_targets)
             count_threads = int(1000//count_targets)
