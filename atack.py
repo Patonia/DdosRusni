@@ -37,7 +37,7 @@ while 1 == 1:
         rrows = rows.split()
         print(rrows)
         count_threads = int(1000//count_targets)
-        for row in rows:
+        for row in rrows:
             print(row)
             trgt = row.split(":")
             print(trgt)
