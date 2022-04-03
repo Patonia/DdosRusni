@@ -33,14 +33,10 @@ while 1 == 1:
         rows = f.read()
         f.seek(0)
         count_targets = len(f.readlines())
-        print (rows, count_targets)
         rrows = rows.split()
-        print(rrows)
         count_threads = int(1000//count_targets)
         for row in rrows:
-            print(row)
             trgt = row.split(":")
-            print(trgt)
             print ("Starting atack to %s with %s threads on %s port" % (trgt[0], count_threads, trgt[1]))
             for i in range(count_threads):
                 #print ("Starting %s thread", i)
