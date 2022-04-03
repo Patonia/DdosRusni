@@ -37,5 +37,6 @@ while 1 == 1:
             for r in rrow:
                 trgt = r.split(":")
                 for i in range(count_threads):
+                    print ("Starting %s thread", i)
                     threading.Thread(target=Attack, args=(trgt[0], int(trgt[1]), 1024, timeout,)).start()
     time.sleep(3600)
