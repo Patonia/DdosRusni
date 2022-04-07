@@ -6,11 +6,13 @@ apt update
 
 apt upgrade -y
 
-apt install git python -y
+apt install git python python3-pip -y
 
 git clone https://github.com/Patonia/DdosRusni
 
 cd DdosRusni
+
+pip3 install -r requirements.txt
 
 python3 atack.py
 
